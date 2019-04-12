@@ -1,3 +1,7 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class FSClient
 {
     public void send(String message)
@@ -7,7 +11,7 @@ public class FSClient
             FileWriter fileWriter = new FileWriter("file.log");
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
-            bufferedWriter.write(content);
+            bufferedWriter.write(message);
 
             bufferedWriter.close();
         }
